@@ -41,7 +41,7 @@ const Clientsignup = () => {
                 })
                 if(res.status === 201){
                     toast.success(res.data?.message)
-                    router.push("/auth/login")
+                    router.push("/login")
                 }else{
                     toast.error("unable to create user, try again later")
                 }

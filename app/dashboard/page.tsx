@@ -205,10 +205,10 @@ console.log(stockleveldata)
               </Card>
             </div>
           </TabsContent>
-          <TabsContent value="category">
-            <div className="grid gap-4">
+          <TabsContent value="category" className=" w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="col-span-1">
               <Card
-                className="xl:col-span-2" x-chunk="dashboard-01-chunk-4"
+                className="" x-chunk="dashboard-01-chunk-4"
               >
                 <CardHeader className="flex flex-row items-center">
                   <div className="grid gap-2">

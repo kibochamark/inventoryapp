@@ -35,9 +35,10 @@ const Clientlogin = () => {
                         toast.error("Invalid credentials or user does not exist")
                     } else {
                         toast.success("welcome back")
+                        router.push("/dashboard")
                     }
 
-                    router.push("/dashboard")
+                    
 
                 }).catch((e) => {
                     console.log(e)

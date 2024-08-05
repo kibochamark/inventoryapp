@@ -110,7 +110,7 @@ const Clientsignup = () => {
                             <p className='text-sm tracking-tight text-red-600 leading-tight'>{formik.errors.confirmpassword}</p>
                         )}
                     </div>
-                    <Input id="confirmpassword" type="confirmpassword" name='confirmpassword' onChange={formik.handleChange}
+                    <Input id="confirmpassword" type="password" name='confirmpassword' onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
                         disabled={formik.isSubmitting} required />
                 </div>

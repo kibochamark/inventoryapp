@@ -28,7 +28,6 @@ const Clientlogin = () => {
             password:Yup.string().min(6).max(8)
         }),
         onSubmit: async (values, formikHelpers) => {
-            console.log(values)
             try {
                 await signIn("credentials", { redirect: false, ...values }).then((data) => {
                     console.log(data, data?.error && data.error.length > 0)
@@ -38,7 +37,7 @@ const Clientlogin = () => {
                         toast.success("welcome back")
                     }
 
-                    router.push("/")
+                    router.push("/dashboard")
 
                 }).catch((e) => {
                     console.log(e)

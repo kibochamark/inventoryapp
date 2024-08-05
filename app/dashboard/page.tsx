@@ -64,9 +64,12 @@ export default async function Dashboard() {
   const categories = await getCategory() || []
   const overview = await getOverview() || []
   const categoriescount = await getInventoryCountByCategory() || []
-  const stockleveldata= await getStockLevelByInterval() || []
+  const stockleveldata = await getStockLevelByInterval() || []
 
-console.log(stockleveldata)
+
+  inventory.sort((a: any, b: any) => b.id - a.id)
+
+  console.log(stockleveldata)
 
   const options = {
     chart: {
@@ -138,6 +141,7 @@ console.log(stockleveldata)
             <p className="text-xs text-muted-foreground">
               since the last hour
             </p>
+            <CreditCard className="h-4 w-4 text-muted-foreground" />
           </CardContent>
         </Card>
         <Card x-chunk="dashboard-01-chunk-3">
@@ -241,7 +245,7 @@ console.log(stockleveldata)
 
       {/* line chart */}
       <div className="w-full shadow-md bg-white border p-4">
-        <StockLineChart data={stockleveldata .length <= 0 ? stockleveldata : stockleveldata?.stockLevelsOverTime} />
+        <StockLineChart data={stockleveldata.length <= 0 ? stockleveldata : stockleveldata?.stockLevelsOverTime} />
       </div>
     </main>
 

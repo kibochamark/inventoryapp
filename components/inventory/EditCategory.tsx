@@ -65,7 +65,6 @@ const EditCategory = () => {
                     RevalidateTags("categories")
                     RevalidateTags("dashboard")
                     RevalidateTags("stocklevel")
-                    formik.resetForm()
                     toast.success("Category updated successfully")
                 }
 

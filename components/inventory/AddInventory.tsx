@@ -40,7 +40,7 @@ const AddInventory = ({ categories }: { categories: any }) => {
         },
         validationSchema: Yup.object().shape({
 
-            name: Yup.string().required().max(10),
+            name: Yup.string().required(),
             description: Yup.string().required(),
             price: Yup.number().required(),
             quantity: Yup.number().required(),

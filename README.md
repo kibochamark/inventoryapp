@@ -1,3 +1,5 @@
+# Inventory App
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -20,17 +22,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+### Dashboard
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The dashboard provides an overview of key inventory metrics through four main cards:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Stock Value Overview**: Displays the total value of all inventory items.
+2. **Recently Added Items**: Shows a list of items that were recently added to the inventory.
+3. **Low Item Stock**: Highlights items that are running low in stock.
+4. **Available Inventories DataGrid**: Presents a comprehensive table of all available inventory items, allowing for sorting and filtering.
 
-## Deploy on Vercel
+### Charts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The app includes charts for visualizing inventory data:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Category Inventory Count**: A chart displaying the total inventory count by category. This allows users to see the distribution of stock across different categories.
+2. **Stock Levels Over Time**: A line chart showing stock levels over time, which can be configured to display data by day or week. This helps users track inventory trends and fluctuations over the selected period.
+
+### Using the Charts
+
+- **Category Inventory Count**: Visualize the inventory count across different categories with an easy-to-read pie chart.
+- **Stock Levels Over Time**: View stock levels over time in a line chart. The x-axis can display days of the week or weeks of the month, depending on the selected interval. The y-axis is adjusted to ensure clarity and prevent data compression.
+
+
+

@@ -99,6 +99,7 @@ const AddInventory = ({ categories }: { categories: any }) => {
                                         type="name"
                                         onChange={formik.handleChange}
                                         onBlur={formik.handleBlur}
+                                        defaultValue={formik.values.name}
                                         disabled={formik.isSubmitting}
 
                                         placeholder=""
@@ -115,6 +116,7 @@ const AddInventory = ({ categories }: { categories: any }) => {
                                         name='price'
                                         type="text"
                                         onChange={formik.handleChange}
+                                        defaultValue={formik.values.price}
                                         onBlur={formik.handleBlur}
                                         disabled={formik.isSubmitting}
 
@@ -134,7 +136,7 @@ const AddInventory = ({ categories }: { categories: any }) => {
                                         onChange={formik.handleChange}
                                         onBlur={formik.handleBlur}
                                         disabled={formik.isSubmitting}
-
+                                        defaultValue={formik.values.quantity}
                                         placeholder=""
                                         required
                                     />
@@ -161,7 +163,7 @@ const AddInventory = ({ categories }: { categories: any }) => {
                                             <p className='text-sm text-red-600 tracking-tight leading-tight'>{formik.errors.description}</p>
                                         )}
                                     </div>
-                                    <Input id="description" type="text" name='description' onChange={formik.handleChange}
+                                    <Input id="description" type="text" name='description' defaultValue={formik.values.description} onChange={formik.handleChange}
                                         onBlur={formik.handleBlur}
                                         disabled={formik.isSubmitting} required />
                                 </div>

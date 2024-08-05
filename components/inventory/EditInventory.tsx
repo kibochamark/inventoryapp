@@ -61,7 +61,6 @@ const EditInventory = ({ categories }: { categories: any }) => {
             categoryid: Yup.string().required(),
         }),
         onSubmit: async (values, formikHelpers) => {
-            console.log(values)
             try {
 
                 const res = await updateInventory({...values})

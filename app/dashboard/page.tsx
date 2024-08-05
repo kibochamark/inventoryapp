@@ -68,8 +68,8 @@ export default async function Dashboard() {
 
 
   inventory.sort((a: any, b: any) => b.id - a.id)
+  categories.sort((a: any, b: any) => b.id - a.id)
 
-  console.log(stockleveldata)
 
   const options = {
     chart: {

@@ -11,6 +11,7 @@ import { redirect, useRouter } from 'next/navigation'
 import { AuthError } from 'next-auth'
 import { toast } from 'sonner'
 import axios from 'axios'
+import { BASE_URL } from '@/lib/constants'
 
 
 const Clientsignup = () => {
@@ -34,7 +35,7 @@ const Clientsignup = () => {
         onSubmit: async (values, formikHelpers) => {
             try {
                 
-                const res= await axios.post("https://inventory-apis.vercel.app/api/v1/" + "registeruser", {
+                const res= await axios.post(BASE_URL + "registeruser", {
                     username:values.username,
                     email:values.email,
                     password:values.password

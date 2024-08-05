@@ -55,6 +55,9 @@ import EditCategory from "@/components/inventory/EditCategory"
 import HighChart from "@/components/globals/Highchart/HighChart"
 import StockLineChart from "@/components/inventory/StockLineChart"
 
+
+export const dynamic = "force-dynamic"
+
 export default async function Dashboard() {
   // fetch inventory and categories
   const inventory = await getInventory() || []

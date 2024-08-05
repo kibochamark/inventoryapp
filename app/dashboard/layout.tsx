@@ -6,6 +6,9 @@ import { Toaster } from "@/components/ui/sonner"
 import { ReactQueryProvider } from "@/components/reactqueryprovider";
 import Header from "@/components/layout/Header";
 import { auth } from "@/auth";
+import { ReactReduxProvider } from "@/components/reactreduxprovider";
+import NextAuthProvider from "@/components/nextauthsession";
+import Footer from "@/components/layout/footer";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,8 +27,13 @@ export default async function Layout({
     return (
 
         <div className="flex min-h-screen w-full flex-col ">
-            <Header />
-            {children}
+            <NextAuthProvider>
+                <Header />
+                <ReactReduxProvider>
+                    {children}
+                    <Footer />
+                </ReactReduxProvider>
+            </NextAuthProvider>
         </div>
 
     );

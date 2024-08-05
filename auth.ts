@@ -20,6 +20,11 @@ declare module "next-auth" {
        * you need to add them back into the newly declared interface.
        */
     } & DefaultSession["user"]
+    expires:string;
+    data:{
+      access:string;
+      refresh:string;
+    }
   }
 }
 

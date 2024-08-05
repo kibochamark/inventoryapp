@@ -1,0 +1,1 @@
+export const BASE_URL="https://inventory-apis.vercel.app/api/v1/"

@@ -124,7 +124,7 @@ export default async function Dashboard() {
             <CardTitle className="text-sm font-medium">
               Low stock items
             </CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
+            <CreditCard className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{overview?.lowStockItems}</div>
@@ -141,7 +141,6 @@ export default async function Dashboard() {
             <p className="text-xs text-muted-foreground">
               since the last hour
             </p>
-            <CreditCard className="h-4 w-4 text-muted-foreground" />
           </CardContent>
         </Card>
         <Card x-chunk="dashboard-01-chunk-3">

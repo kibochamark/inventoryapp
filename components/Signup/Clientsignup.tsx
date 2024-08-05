@@ -47,7 +47,7 @@ const Clientsignup = () => {
                     toast.error("unable to create user, try again later")
                 }
             } catch (e: any) {
-                toast.error("something went wrong")
+                toast.error("something went wrong or user already exists")
 
             }
 

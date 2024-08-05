@@ -206,7 +206,7 @@ console.log(stockleveldata)
             </div>
           </TabsContent>
           <TabsContent value="category" className=" w-full grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="col-span-1">
+            <div className="col-span-2">
               <Card
                 className="" x-chunk="dashboard-01-chunk-4"
               >

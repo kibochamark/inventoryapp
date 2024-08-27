@@ -25,7 +25,7 @@ const Clientlogin = () => {
         },
         validationSchema:Yup.object().shape({
             email:Yup.string().email().required(),
-            password:Yup.string().min(6).max(8)
+            password:Yup.string().min(6)
         }),
         onSubmit: async (values, formikHelpers) => {
             try {

@@ -29,7 +29,7 @@ const Clientsignup = () => {
         validationSchema: Yup.object().shape({
             username: Yup.string().max(7).required(),
             email: Yup.string().email().required(),
-            password: Yup.string().min(6).max(8),
+            password: Yup.string().min(6),
             confirmpassword: Yup.string().oneOf([Yup.ref('password')], 'Passwords must match').required()
         }),
         onSubmit: async (values, formikHelpers) => {
